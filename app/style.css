@@ -1,23 +1,21 @@
 @charset "UTF-8";
-/* fontawesome 6 */
-@font-face {
-  font-family: "fa-brands";
-  src: url(./fonts/fa-brands.ttf) format("truetype");
-}
-@font-face {
-  font-family: "fa-regular";
-  src: url(./fonts/fa-regular.ttf) format("truetype");
-}
-@font-face {
-  font-family: "fa-solid";
-  src: url(./fonts/fa-solid.ttf) format("truetype");
-}
-ul.fontawesome {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 /* Шрифты общие */
+@font-face {
+  font-family: "Montserrat-B";
+  src: url(fonts/Montserrat-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-L";
+  src: url(fonts/Montserrat-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-M";
+  src: url(fonts/Montserrat-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-R";
+  src: url(fonts/Montserrat-Regular.ttf) format("truetype");
+}
 html, body {
   position: relative;
   min-height: 100%;
@@ -28,16 +26,278 @@ html, body {
 
 div, header, main, section, footer, menu, ul, ol, li {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Стили общие */
+h1 {
+  color: white;
+  font-family: "Montserrat-L";
+  font-size: 6rem;
+}
+
+h1 + p {
+  color: white;
+  font-family: "Montserrat-L";
+  font-size: 2.2rem;
+}
+
+h1 span {
+  color: #FFD662;
+}
+
+h2 {
+  color: #00539C;
+  font-family: "Montserrat-L";
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  padding: 2.5rem 0 1.5rem 0;
+  font-family: "Montserrat-L";
+  font-size: 2rem;
+  color: #00539C;
+}
+
+h3 + span {
+  margin-bottom: 2rem;
+  font-family: "Montserrat-L";
+  font-size: 1.6rem;
+  color: #666666;
+}
+
+p {
+  margin-bottom: 3rem;
+  font-family: "Montserrat-L";
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #666666;
+}
+
+span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  font-family: "Montserrat-L";
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.icons {
+  display: flex;
+}
+.icons li {
+  display: flex;
+  align-items: center;
+}
+
+a.btn {
+  width: 18rem;
+  height: 5rem;
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #00539C;
+  background: #FFD662;
+  font-size: 1.6rem;
+}
+
+form .btn {
+  position: relative;
+  padding: 1rem 1rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  background: #FFD662;
+  transition: 0.3s;
+}
+
 /* Стили контекстные */
+header {
+  min-height: 100vh;
+  background: linear-gradient(#00539c, rgba(0, 83, 156, 0.9), #00539c), url(./image/header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header .h01 {
+  border-bottom: 1px solid #fff;
+}
+header .h01 .row {
+  min-height: 12rem;
+}
+header .h01 .area-10 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .h01 .area-11 {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+header .h01 .area-11 .icons li {
+  margin: 0 1rem 0 0;
+}
+header .h01 .area-11 .icons li img {
+  max-width: 2rem;
+}
+header .h01 .area-11 .icons li a {
+  margin: 0 0 0 1rem;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+header .h01 .area-12 a {
+  position: relative;
+  padding: 1rem 1rem;
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+header .h02 {
+  padding: 6rem;
+}
+header .h02 .area-11 a.btn {
+  background: white;
+}
+header .h02 .area-12 {
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+}
+header .h02 form {
+  display: flex;
+  flex-direction: column;
+}
+header .h02 form input {
+  margin-bottom: 2rem;
+}
+header .h02 form select {
+  min-width: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+header .h02 form textarea {
+  margin-bottom: 2rem;
+}
+
 main > section {
   min-height: 100vh;
-  padding: 2rem 0 2rem 0;
+  padding: 5rem 0 5rem 0;
   background-color: transparent;
 }
 
 /* Стили контекстные */
+.s01 h2 {
+  color: #00539C;
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+}
+.s01 h2 span {
+  font-size: 12rem;
+}
+
+/* Стили контекстные */
+.s02 .area-11 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.s02 .area-11 span {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.s02 .area-11 img {
+  margin: 3rem 0 5rem;
+}
+.s02 .area-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Стили контекстные */
+.s03 .area-11 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.s03 .area-11 span {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.s03 .area-11 img {
+  margin: 3rem 0 5rem;
+}
+
+/* Стили контекстные */
+.s04 .area-11 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.s04 .area-11 span {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.s04 .area-11 img {
+  margin: 3rem 0 5rem;
+}
+.s04 .area-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.s04 .icons li img {
+  margin: 0 1rem;
+  max-width: 4rem;
+}
+
+/* Стили контекстные */
+.s05 .area-11 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.s05 .area-11 span {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.s05 .area-11 img {
+  margin: 3rem 0 5rem;
+}
+
+/* Стили контекстные */
+.s08 .area-11 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.s08 .area-11 span {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.s08 .area-11 img {
+  margin: 3rem 0 5rem;
+}
+
+footer {
+  min-height: 50rem;
+  padding: 5rem 0 5rem 0;
+  background: #00539C;
+}
+
 /* Стили контекстные */
 /* Адаптив */
