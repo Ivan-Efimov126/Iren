@@ -145,28 +145,33 @@ header .h01 .area-10 {
 }
 header .h01 .area-11 {
   display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+header .h01 .area-12 {
+  display: flex;
   justify-content: flex-end;
   margin-bottom: 1rem;
 }
-header .h01 .area-11 .icons li {
+header .h01 .area-12 .icons li {
   margin: 0 1rem 0 0;
 }
-header .h01 .area-11 .icons li img {
+header .h01 .area-12 .icons li img {
   max-width: 2rem;
 }
-header .h01 .area-11 .icons li a {
+header .h01 .area-12 .icons li a {
   margin: 0 0 0 1rem;
   color: #ffffff;
   font-size: 1.3rem;
 }
-header .h01 .area-12 a {
+header .h01 .area-13 a {
   position: relative;
   padding: 1rem 1rem;
   color: #ffffff;
   font-size: 1.6rem;
 }
 header .h02 {
-  padding: 6rem;
+  padding: 6rem 0;
 }
 header .h02 .area-11 a.btn {
   background: white;
@@ -198,6 +203,18 @@ main > section {
   padding: 5rem 0 5rem 0;
   background-color: transparent;
 }
+main > section .area-11 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main > section .area-11 span {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+main > section .area-11 img {
+  margin: 3rem 0 5rem;
+}
 
 /* Стили контекстные */
 .s01 h2 {
@@ -208,57 +225,41 @@ main > section {
 .s01 h2 span {
   font-size: 12rem;
 }
+.s01 .area-11 {
+  align-items: flex-start;
+}
 
 /* Стили контекстные */
-.s02 .area-11 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.s02 .area-11 span {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
-.s02 .area-11 img {
-  margin: 3rem 0 5rem;
-}
 .s02 .area-12 {
+  padding: 0 0 2rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 10px 5px 5px grey;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.s02 .area-12 p {
+  margin: 0 1rem 1rem 1rem;
 }
 
 /* Стили контекстные */
-.s03 .area-11 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.s03 .area-11 span {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
-.s03 .area-11 img {
-  margin: 3rem 0 5rem;
+.s03 .area-21 {
+  min-height: 100%;
+  margin: 0 0 1rem 0;
 }
 
 /* Стили контекстные */
-.s04 .area-11 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.s04 .area-11 span {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
-.s04 .area-11 img {
-  margin: 3rem 0 5rem;
-}
 .s04 .area-12 {
+  padding: 0 0 2rem 0;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.s04 .area-12 > div {
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 .s04 .icons li img {
   margin: 0 1rem;
@@ -267,30 +268,145 @@ main > section {
 
 /* Стили контекстные */
 .s05 .area-11 {
+  align-items: flex-start;
+}
+.s05 .area-12 {
+  position: relative;
+  overflow: hidden;
+  max-height: 11rem;
+  padding: 1rem 0;
+  border-top: 1px solid black;
+}
+.s05 .area-12 img {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  max-width: 3rem;
+}
+.s05 .area-12 img:hover {
+  cursor: pointer;
+}
+.s05 .area-12.active {
+  max-height: 18rem;
+  transition-property: max-height;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+}
+.s05 .area-12 h3 {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
-.s05 .area-11 span {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
-.s05 .area-11 img {
-  margin: 3rem 0 5rem;
+.s05 .area-12 span {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 2rem 0 0;
+  border-radius: 0.5rem;
+  background: #FFD662;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  line-height: 1;
 }
 
 /* Стили контекстные */
-.s08 .area-11 {
+.s06 .area-10 {
+  position: relative;
+}
+.s06 .area-10 > div {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.s08 .area-11 span {
-  margin-bottom: 1rem;
+.s06 .area-10 > div img {
+  max-width: 10rem;
+}
+.s06 .area-12 span, .s06 .area-13 span {
+  font-size: 6rem;
+  display: flex;
+  align-items: start;
+}
+.s06 .area-12 span::before, .s06 .area-13 span::before {
+  content: "$";
   font-size: 2rem;
 }
-.s08 .area-11 img {
-  margin: 3rem 0 5rem;
+.s06 .area-12 {
+  color: #000000;
+  background: #FFD662;
+}
+.s06 .area-12 span {
+  color: #000000;
+}
+.s06 .area-13 {
+  color: #ffffff;
+  background: #00539C;
+}
+.s06 .area-13 h3 {
+  color: #ffffff;
+}
+.s06 .area-13 span {
+  color: #ffffff;
+}
+.s06 .area-14 {
+  position: absolute;
+  top: 24rem;
+  left: 0.75rem;
+  width: 36.5rem;
+  padding: 2rem;
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+}
+.s06 .area-14 ul {
+  margin-bottom: 2rem;
+  list-style: none;
+  width: 100%;
+}
+.s06 .area-14 ul li {
+  padding: 1rem;
+  border-bottom: 1px solid #eeeeee;
+  color: #2A293E;
+  text-align: center;
+}
+.s06 .area-14 ul li:last-child {
+  border-bottom: none;
+}
+.s06 .area-14 ul span {
+  font-family: "Montserrat-L";
+  font-size: 1.4rem;
+}
+
+/* Стили контекстные */
+.s07 .swiper-slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.s07 .area-12 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: -7.5rem;
+}
+.s07 .area-12 img {
+  overflow: hidden;
+  max-width: 15rem;
+  border: 2rem solid white;
+  border-radius: 50%;
+}
+.s07 .area-13 {
+  position: relative;
+  padding: 10rem 2.5rem 2.5rem 2.5rem;
+  border-radius: 1rem;
+  background: #FFD662;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 footer {
@@ -300,4 +416,70 @@ footer {
 }
 
 /* Стили контекстные */
+.f01 .area-11 h3 {
+  color: #FFD662;
+  text-transform: uppercase;
+}
+.f01 .area-11 p {
+  color: white;
+}
+.f01 .area-11 ul {
+  list-style: none;
+}
+.f01 .area-11 li {
+  margin-bottom: 2rem;
+}
+.f01 .area-11 span {
+  font-family: "Montserrat-L";
+  color: white;
+  font-size: 1.4rem;
+}
+.f01 .area-11 img {
+  max-width: 3rem;
+  margin: 0 1rem 0 0;
+}
+.f01 .area-11 form {
+  position: relative;
+}
+.f01 .area-11 form input[type=text] {
+  padding: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+.f01 .area-11 form input[type=submit] {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem 1rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  background: #FFD662;
+  transition: 0.3s;
+}
+.f01 .area-12 {
+  display: flex;
+  justify-content: center;
+}
+.f01 .area-12 ul {
+  list-style: none;
+  display: flex;
+}
+.f01 .area-12 li {
+  margin: 2rem 0;
+  padding: 0 2rem;
+  border-right: 1px solid white;
+}
+.f01 .area-12 li:last-child {
+  border-right: none;
+}
+.f01 .area-12 span {
+  font-family: "Montserrat-L";
+  color: white;
+  font-size: 1.4rem;
+}
+
 /* Адаптив */

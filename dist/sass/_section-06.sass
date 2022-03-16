@@ -1,11 +1,56 @@
 /* Стили контекстные */
 .s06 
-  .area-11 
+  .area-10 
+    position: relative
+  .area-10 > div 
+    min-height: 100%
     display: flex
     flex-direction: column
     align-items: center
-    span 
-      margin-bottom: 1.0rem
-      font-size: 2.0rem
     img 
-      margin: 3.0rem 0 5.0rem
+      max-width: 10.0rem
+  .area-12, .area-13
+    span 
+      font-size: 6.0rem
+      display: flex
+      align-items: start
+      &::before
+        content: '$'
+        font-size: 2.0rem
+  .area-12
+    color: #000000
+    background: #FFD662  
+    span 
+      color: #000000
+  .area-13 
+    color: #ffffff
+    background: #00539C
+    h3 
+      color: #ffffff
+    span 
+      color: #ffffff
+  .area-14 
+    position: absolute
+    top: 24.0rem
+    left: 0.75rem
+    width: 36.5rem
+    padding: 2.0rem
+    border-radius: 1.0rem 1.0rem 0 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    background: #fff
+    ul 
+      margin-bottom: 2.0rem
+      list-style: none
+      width: 100%
+      li 
+        padding: 1.0rem
+        border-bottom: 1px solid #eeeeee
+        color: #2A293E
+        text-align: center
+        &:last-child
+          border-bottom: none
+      span 
+        font-family: "Montserrat-L"
+        font-size: 1.4rem

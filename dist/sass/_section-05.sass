@@ -1,11 +1,37 @@
 /* Стили контекстные */
 .s05 
   .area-11 
-    display: flex
-    flex-direction: column
-    align-items: center
-    span 
-      margin-bottom: 1.0rem
-      font-size: 2.0rem
+    align-items: flex-start
+  .area-12 
+    position: relative
+    overflow: hidden
+    max-height: 11.0rem
+    padding: 1.0rem 0
+    border-top: 1px solid black
     img 
-      margin: 3.0rem 0 5.0rem
+      position: absolute
+      top: 4.0rem
+      right: 0
+      max-width: 3.0rem
+      &:hover 
+        cursor: pointer
+    &.active 
+      max-height: 18.0rem
+      transition-property: max-height
+      transition-duration: 2.0s
+      transition-timing-function: ease
+    h3 
+      display: flex
+      align-items: center
+    span 
+      display: block
+      width: 5.0rem
+      height: 5.0rem
+      margin: 0 2.0rem 0 0
+      border-radius: 0.5rem
+      background: #FFD662
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 3.0rem
+      line-height: 1.0
